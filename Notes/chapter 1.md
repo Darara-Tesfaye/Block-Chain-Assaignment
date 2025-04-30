@@ -29,31 +29,43 @@ Value types are fundamental data types in Solidity that hold specific kinds of i
 
 **Storage variables** hold data that persists on the Ethereum blockchain, stored in **32-byte (256-bit) slots**. Efficient management is crucial due to gas costs associated with reading and writing to the blockchain.
 
+- **Default Values**: Most variables start with a value of `0`, unless marked as `constant`, which can save space.
+
+- **Memory Efficiency**: Developers often use low-level programming techniques to enhance gas efficiency.
+
+Storage variables act as the permanent memory of a smart contract, retaining important data over time.
+
 - **Declaring Storage Variables**: Define them inside a contract. Example:
   ```solidity
   contract MyContract {
       bool myVariable; // A storage variable
+  }
+### 3. Functions in Solidity
+**Functions** are blocks of code that define a smart contract’s behavior, such as updating data, reading values, or handling payments. They have two key properties: visibility (who can call them) and state mutability (what they can do with data).
 
-Default Values: Most variables start with a value of 0, unless marked as constant, which can save space.
+**Visibility Types**:
 
-Memory Efficiency: Developers often use low-level programming techniques to enhance gas efficiency.
+- **`private`**: Callable only inside the contract.
+- **`internal`**: Callable inside the contract and by inherited contracts.
+- **`public`**: Callable from anywhere (inside or outside the contract).
+- **`external`**: Callable only from outside the contract, often used as an entry point.
 
-Storage variables act as the permanent memory of a smart contract, retaining important data over time.
+**State Mutability Types**:
 
-3. Functions in Solidity
-Functions are blocks of code within a smart contract that perform specific tasks, defining how a contract behaves and interacts with users or other contracts. Functions have two key properties: visibility and state mutability.
+- **`pure`**: Doesn’t read or write to the blockchain (like a calculator).
+- **`view`**: Reads blockchain data but doesn’t modify it (read-only).
+- **`payable`**: Can receive and store **Ether** (Ethereum’s currency).
 
-Visibility Types
-private: Callable only inside the contract.
-internal: Callable inside the contract and by child contracts.
-public: Callable from anywhere—inside or outside the contract.
-external: Callable only from outside the contract.
-State Mutability Types
-pure: Does not read or write to the blockchain.
-view: Can read blockchain data but can’t change it.
-payable: Can receive and store Ether.
-Function Syntax
-A function in Solidity looks like this:
-function myFunction(uint param1, string param2) public view returns (uint) {
+**Function Syntax**
+A typical function looks like this:
+
+ ```solidity
+  function myFunction(uint param1, string param2) public view returns (uint) {
     return param1 * 2; // Example calculation
 }
+
+- `functionName`: Name of the function.
+- `param1, param2`: Input parameters (optional).
+- `public view`:  Visibility and mutability.
+- `returns (uint)`: Data type of the returned value.
+
