@@ -1,2 +1,3 @@
 # Block-Chain-Assaignment
-This repository is for our group project on "Introduction to Blockchain," focusing on learning Solidity through Alchemy University. We aim to understand blockchain fundamentals, develop smart contracts, and create a decentralized application (DApp). Contributions from all group members are tracked to reflect our collaborative effort.
+#Project Overview
+Welcome to the Introduction to Blockchain repository! This project is a group effort to complete a beginner's course in Solidity and develop smart contracts together. We will document our progress, share notes, exercises, and code in this public GitHub repository.
