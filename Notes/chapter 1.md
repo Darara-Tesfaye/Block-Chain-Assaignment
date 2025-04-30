@@ -64,8 +64,9 @@ A typical function looks like this:
     return param1 * 2; // Example calculation
 }
 
-- `functionName`: Name of the function.
-- `param1, param2`: Input parameters (optional).
-- `public view`:  Visibility and mutability.
-- `returns (uint)`: Data type of the returned value.
+  - functionName: Name of the function.
+  - param1, param2: Input parameters (optional).
+  - public view:  Visibility and mutability.
+  - returns (uint): Data type of the returned value.
 
+**bwefbjewh**
