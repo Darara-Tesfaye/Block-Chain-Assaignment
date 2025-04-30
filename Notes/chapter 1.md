@@ -56,18 +56,19 @@ Storage variables act as the permanent memory of a smart contract, retaining imp
 - **`view`**: Reads blockchain data but doesn’t modify it (read-only).
 - **`payable`**: Can receive and store **Ether** (Ethereum’s currency).
 
-**Function Syntax**:
+
+#### Function Syntax
 A typical function looks like this:
 
- ```solidity
-  function myFunction(uint param1, string param2) public view returns (uint) {
+```solidity
+function myFunction(uint param1, string param2) public view returns (uint) {
     return param1 * 2; // Example calculation
 }
 
-  - functionName: Name of the function.
-  - param1, param2: Input parameters (optional).
-  - public view:  Visibility and mutability.
-  - returns (uint): Data type of the returned value.
+-**functionName**: Name of the function.
+param1, param2: Input parameters (optional).
+public view: Visibility and mutability.
+returns (uint): Data type of the returned value.
 
 
 #### Special Function: Constructor
